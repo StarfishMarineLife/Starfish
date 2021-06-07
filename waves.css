@@ -1,0 +1,24 @@
+
+.waves_animation{
+  transform: translateY(10px);
+}
+      .waves {
+      animation: wave 9s linear;
+      animation-iteration-count:infinite;
+      fill: #4478e3;
+      }
+      #wave2 {
+        animation-duration:10s;
+        animation-direction: reverse;
+        
+        fill: #a2d9ff;
+        
+      }
+      #wave3 {
+        animation-duration: 12s;
+        opacity:.3;
+      }
+
+      @keyframes wave {
+        to {transform: translateX(-100%);}
+      }

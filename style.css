@@ -1,0 +1,26 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  
+  
+  
+}
+
+.section{
+  height: 20vh;
+}
+
+.top{
+  background-color: white;
+}
+.bottom{
+  background-image: linear-gradient( #4478e3, black);
+}
+#title{
+  text-align: center;
+}
+
+svg{
+   padding: 0px;
+  margin: 0px; 
+}
