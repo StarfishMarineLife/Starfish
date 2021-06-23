@@ -1,0 +1,25 @@
+
+
+.falling-token{
+  top: -20%;
+  animation-name: rainTokens;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-timing-function: linear; 
+  position: absolute;
+}
+
+.static-rewards-container{
+  overflow: hidden;
+  position: relative;
+}
+
+
+@keyframes rainTokens{
+  0%{
+    top: -30%;
+  }
+  100%{
+    top: 120%;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>StarFish</title>
+
+    <!-- bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- custom css -->
+    <link href="animations/sidebar.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header style="background-color: #4CB944;"class="site-header fixed-top">
+      <!-- Navbar -->
+      <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <div style="display: flex; align-items:center;">
+              <p>Starfish</p>
+            </div>
+          </a>
+          <!--Web Nav-->
+          <ul class="navbar-nav d-none d-md-flex" id="navFont">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Chart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/index.html#roadmap">Roadmap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/presale.html">Presale</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/howToBuy.html">How to Buy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Whitepaper</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/aboutUs.html">About Us</a>
+            </li>
+          </ul>
+            <ul class="navbar-nav d-none d-md-flex">
+              <li class="nav-item">
+                <a href="#"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
+              </li>
+              <li><div style="width:10px;"></div></li>
+              <li class="nav-item">
+                <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
+              </li>
+              <li><div style="width:10px;"></div></li>
+              <li class="nav-item">
+                <a href="#"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
+              </li>
+            </ul>
+            <a id="openMenu" class="btn btn-primary d-flex d-md-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a>
+        </div>
+
+      </nav>   
+  </header>
+    <!--Mobile Nav-->
+    <div id="slideMenu" class="sidebar-pullout"  style="background:#e6f4ff;">
+      <div style="padding: 10px; justify-content: space-around;" class="d-flex">
+        <a href="#"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
+        <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
+        <a href="#"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
+      </div>
+      <ul class="list-group">
+        <a style="text-decoration: none;" href="#"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li></a>
+        <a style="text-decoration: none;" href="/index.html#roadmap"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li></a>
+        <a style="text-decoration: none;" href="/presale.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li></a>
+        <a style="text-decoration: none;" href="/howToBuy.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li></a>
+        <a style="text-decoration: none;" href="#"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Whitepaper</li></a>
+        <a style="text-decoration: none;" href="/aboutUs.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li></a>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

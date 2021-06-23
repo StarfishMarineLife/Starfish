@@ -1,0 +1,36 @@
+.sidebar-pullout{
+  position: fixed;
+  right:-70%;
+  top: 15vh;
+  height: 100vh;
+  width:66vw;
+  background-color: black;
+  z-index: 999;
+}
+
+.slideOut{
+  animation: slideOut 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+.slideIn{
+  animation: slideIn 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOut{
+  0%{
+    right: -70%;
+  }
+  100%{
+    right: 0%;
+  }
+}
+@keyframes slideIn{
+  0%{
+    right: 0%;
+  }
+  100%{
+    right: -70%;
+  }
+}
