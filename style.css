@@ -43,7 +43,12 @@ nav *{
   position: relative;
   
 }
-
+.top{
+  background: url('imgs/dolphins3.jpg'); 
+  background-size: 100% 100%;  
+  background-attachment: fixed; 
+  background-position: center;
+}
 .bottom{
   background-image: linear-gradient( var(--primary-color), black);
   z-index: -2;
@@ -83,9 +88,12 @@ a{
 
 @media only screen and (max-width: 900px){
  .call-to-action{
-   width: 100%;
-    margin-left: 0px;
- margin-right: 0px;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+ }
+ .top{
+   background-size:cover;
  }
 
 }
