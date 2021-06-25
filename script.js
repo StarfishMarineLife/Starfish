@@ -38,6 +38,6 @@ function updateTime(){
   var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
   let element = document.getElementById("presaleCountDown");
-  element.innerHTML = ""+days+" days <br>"+hours+" hours "+minutes+"m "+seconds+"s";
+  element.innerHTML = ""+days+" Days "+hours+" H "+minutes+" M "+seconds+"s";
 }
 setInterval(updateTime, 1000);

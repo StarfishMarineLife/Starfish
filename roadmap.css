@@ -24,6 +24,10 @@
   margin-left: -1px;
 }
 
+.card .timeline::after {
+  left:10%;
+}
+
 #roadmap .container {
   padding: 15px 30px;
   position: relative;
@@ -37,6 +41,10 @@
 
 #roadmap .container.right {
   left: 25%;
+}
+
+#roadmap .card *{
+  left: 10%;
 }
 
 #roadmap .container::after {
@@ -71,27 +79,6 @@
   left: 8px;
 }
 
-#roadmap .container .date {
-  position: absolute;
-  display: inline-block;
-  top: calc(50% - 8px);
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  z-index: 1;
-}
-
-#roadmap .container.left .date {
-  right: -75px;
-}
-
-#roadmap .container.right .date {
-  left: -75px;
-}
-
 #roadmap .container .icon {
   position: absolute;
   display: inline-block;
@@ -99,7 +86,7 @@
   height: 40px;
   padding: 9px 0;
   top: calc(50% - 20px);
-  background: #ffd3b3;
+  background: white;
   border: 2px solid #8C40BA;
   border-radius: 40px;
   text-align: center;
@@ -118,7 +105,7 @@
 
 #roadmap .container .content {
   padding: 30px 90px 30px 30px;
-  background: #ffd3b3;
+  background: white;
   position: relative;
   border-radius: 0 500px 500px 0;
 }
