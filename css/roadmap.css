@@ -1,0 +1,74 @@
+#roadmap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+
+/* Timeline */
+
+.timeline {
+  border-left: 4px solid #3289fc;
+  color: white;
+  margin: 18px auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 5px 14px;
+  list-style: none;
+}
+.timeline p {
+  color: #aba9d7;
+  font-size: 15px;
+}
+.timeline .event {
+  margin-bottom: 46px;
+  position: relative;
+
+  
+}
+
+.hidden {
+  max-height: 0px;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.transition {
+  max-height: 5000px;
+  transition: max-height 0.3s ease-in;
+  overflow: visible;
+}
+
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .event .date {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -176.5px;
+  color: white;
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
+}
+.timeline .event .dot {
+  position: absolute;
+  display: block;
+  top: 0;
+  box-shadow: 0 0 0 4px #3289fc;
+  left: -22px;
+  top: -2px;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  background: white;
+}
+
+#roadmap p{
+  padding-bottom: 15px;
+}

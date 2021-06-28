@@ -1,0 +1,18 @@
+You shouldn't apply a width: xx% to bootstrap rows and columns.
+
+They have built in width modifiers
+
+div class="col-sm-12" means its a column that only appears on small screens and is the full grid width (grid is divided into 12 columns)
+
+col-sm-x
+col-md-x
+col-lg-x
+
+small, medium, large screen sizes
+
+1-12 for widths
+
+they can even be offset
+
+
+https://getbootstrap.com/docs/5.0/layout/grid/

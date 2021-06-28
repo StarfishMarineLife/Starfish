@@ -1,0 +1,43 @@
+
+
+.falling-token{
+  top: -20%;
+  animation-name: rainTokens;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-timing-function: linear; 
+  position: absolute;
+}
+
+.static-rewards-container{
+  overflow: hidden;
+  position: relative;
+}
+
+.octopus{
+  filter: invert(100%);
+  animation-name: restore;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes restore{
+  0%{
+    transform: translate(-50%, -50%);
+  }
+  50%{
+    transform: translate(-50%, -42%);
+  }
+  100%{
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes rainTokens{
+  0%{
+    top: -30%;
+  }
+  100%{
+    top: 120%;
+  }
+}

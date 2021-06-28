@@ -1,93 +1,148 @@
 <html>
-  <head>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- custom css -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="animations/waves.css" rel="stylesheet" type="text/css" />
-    <link href="animations/sidebar.css" rel="stylesheet" type="text/css" />
-    <link href="animations/static-rewards.css" rel="stylesheet" type="text/css"/>
-
-
-    <meta name="fortmatic-site-verification" content="lWsU8ehY2eqFA2QM" />
-  </head>
-  <body>
-        <header style="background-color: #4CB944;"class="site-header fixed-top">
-      <!-- Navbar -->
-      <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">
-            <div style="display: flex; align-items:center;">
-              <p>Starfish</p>
+    <head>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- custom css -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/sidebar.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    <body>
+        <header style="background-color: #4CB944;" class="site-header fixed-top">
+            <!-- Navbar -->
+            <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+                <div class="container-fluid">
+                    <!--Web Logo-->
+                    <div class="row d-none d-md-flex">
+                        <a class="navbar-brand" href="index.html">
+                            <div style="display: flex; align-items:center;"> <img height="75" src="imgs/icons/fish-token.png" /> </div>
+                        </a>
+                    </div>
+                    <!--Mobile Logo-->
+                    <div class="card d-block d-md-none" 
+                    <a class="navbar-brand" href="index.html" style="border:none;">
+                        <div style="display: flex; align-items:center;"> <img height="50" src="imgs/icons/fish-token.png" /> </div>
+                    </a>
+                </div>
+                <!--Web Nav-->
+                <ul class="navbar-nav d-none d-lg-flex" id="navFont">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#roadmap">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/presale.html">Presale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/howToBuy.html">How to Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/aboutUs.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                    </li>
+                    <li>
+                        <div style="width:10px;"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png" /></a>
+                    </li>
+                    <li>
+                        <div style="width:10px;"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
+                    </li>
+                </ul>
+                <a id="openMenu" class="btn btn-primary d-flex d-lg-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a> </div>
+            </nav>
+        </header>
+        <!--Mobile Nav-->
+        <div id="slideMenu" class="sidebar-pullout" style="background:#e6f4ff;">
+            <div style="padding: 10px; justify-content: space-around;" class="d-flex">
+                <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png" /></a>
+                <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
             </div>
-          </a>
-          <!--Web Nav-->
-          <ul class="navbar-nav d-none d-md-flex" id="navFont">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Chart</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/index.html#roadmap">Roadmap</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Presale</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/howToBuy.html">How to Buy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/whitepaper.html">Whitepaper</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/aboutUs.html">About Us</a>
-            </li>
-          </ul>
-            <ul class="navbar-nav d-none d-md-flex">
-              <li class="nav-item">
-                <a href="#"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
-              </li>
-              <li><div style="width:10px;"></div></li>
-              <li class="nav-item">
-                <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
-              </li>
-              <li><div style="width:10px;"></div></li>
-              <li class="nav-item">
-                <a href="#"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
-              </li>
+            <ul class="list-group">
+                <a style="text-decoration: none;" href="#">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li>
+                </a>
+                <a style="text-decoration: none;" href="#roadmap">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li>
+                </a>
+                <a style="text-decoration: none;" href="/presale.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li>
+                </a>
+                <a style="text-decoration: none;" href="/howToBuy.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li>
+                </a>
+                <a style="text-decoration: none;" href="/aboutUs.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li>
+                </a>
             </ul>
-            <a id="openMenu" class="btn btn-primary d-flex d-md-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a>
         </div>
+        <section>
+            <div class="container" align="center">
+              <h1 class="display-4">Presale</h1>
+              <br><br>
+              <div class="row" style="width:25%;">
+                <button class="btn btn-warning" id="connect">Connect</button>
+              </div>
+              <br>
+              <p id="address"></p>
+              <br>
+              <div class="collapse" id="buyCalc">
+                <div class="row" style="width:70%;">
+                  <div class="col">
+                    <div class="investment">
+                  <div class="input-group">
+                  <input type="number" class="form-control" placeholder="Investment Amount ($)" id="investment-amount"/>
+                  <button class="btn btn-success" type="button" id="go">GO</button></div>
+                </div>
+                  </div>
+                </div>
+                
+                <div class="row" style="width:70%;">
+                  <div class="col">
+                    <div class="input-group">
+                    <input class="form-control" id="coins" type="number"/>
+                    <button class="btn btn-success" id="buy">Buy</button>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <p id="rate" style="padding-top:20px; color:#000000;">EXCHANGE RATE</p>
+                <p id="price" style="padding-top:20px; color:#00000000;">BUY</p>
+              </div>
+            </div>
+        </section>
+        <footer style="">
+            <div  class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <small class="d-block mb-3 text-muted">Copyright © StarFish 2021</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fortmatic@latest/dist/fortmatic.js"></script>
+        <script src="js/web3.js"></script>
 
-      </nav>   
-  </header>
-    <!--Mobile Nav-->
-    <div id="slideMenu" class="sidebar-pullout"  style="background:#e6f4ff;">
-      <div style="padding: 10px; justify-content: space-around;" class="d-flex">
-        <a href="#"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
-        <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
-        <a href="#"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
-      </div>
-      <ul class="list-group">
-        <a style="text-decoration: none;" href="#"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li></a>
-        <a style="text-decoration: none;" href="/index.html#roadmap"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li></a>
-        <a style="text-decoration: none;" href="#"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li></a>
-        <a style="text-decoration: none;" href="/howToBuy.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li></a>
-        <a style="text-decoration: none;" href="/whitepaper.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Whitepaper</li></a>
-        <a style="text-decoration: none;" href="/aboutUs.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li></a>
-      </ul>
-    </div>
-    <div class="container">
-      <div style="height: 15%;"></div>
-      <h1 style="text-align: center;" class="display-4">Starfish Presale</h1>
-      <div style="height: 15%;">
-      </div>
-      <div style="width:100%; height: 40%; background-color:white;">
-        <div style="display:flex; flex-direction: row-reverse;">
-          <button class="btn btn-primary">Connect</button>
-        </div>
-      </div>
-    </div>
-  </body>
+
+        <script src="js/abi.js"></script>
+        <script src="js/preorder.js"></script>
+        <script src="js/sidenav.js"></script>
+        <script src="js/web3script.js"></script>
+    </body>
 </html>

@@ -1,414 +1,329 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>StarFish</title>
-
-    <!-- bootstrap -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- custom css -->
-    <link href="roadmap.css" rel="stylesheet" type="text/css" />
-    <link href="animations/waves.css" rel="stylesheet" type="text/css" />
-    <link href="animations/sidebar.css" rel="stylesheet" type="text/css" />
-    <link href="animations/static-rewards.css" rel="stylesheet" type="text/css"/>
-    <link href="animations/fish.css" rel="stylesheet" type="text/css"/>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <meta name="fortmatic-site-verification" content="tUjxdUtn9PAn79eL" />
-  </head>
-  <body>
-    <header style="background-color: #4CB944;"class="site-header fixed-top">
-      <!-- Navbar -->
-      <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-        <div class="container-fluid">
-          <!--Web Logo-->
-          <div class="row d-none d-md-flex">
-          <a class="navbar-brand" href="#">
-            <div style="display: flex; align-items:center;">
-              <img height="75" src="imgs/icons/fish-token.png" />
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>StarFish</title>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- custom css -->
+        <link href="css/animations/waves.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/sidebar.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/static-rewards.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/piechart.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/fish.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/roadmap.css" rel="stylesheet" type="text/css" />
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <meta name="fortmatic-site-verification" content="tUjxdUtn9PAn79eL" />
+    </head>
+    <body style="background-color: black;">
+        <header style="background-color: #4CB944;" class="site-header fixed-top">
+            <!-- Navbar -->
+            <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+                <div class="container-fluid">
+                    <!--Web Logo-->
+                    <div class="row d-none d-md-flex">
+                        <a class="navbar-brand" href="#">
+                            <div style="display: flex; align-items:center;"> <img height="75" src="imgs/icons/fish-token.png" /> </div>
+                        </a>
+                    </div>
+                    <!--Mobile Logo-->
+                    <div class="card d-block d-md-none" 
+                    <a class="navbar-brand" href="#" style="border:none;">
+                        <div style="display: flex; align-items:center;"> <img height="50" src="imgs/icons/fish-token.png" /> </div>
+                    </a>
+                </div>
+                <!--Web Nav-->
+                <ul class="navbar-nav d-none d-lg-flex" id="navFont">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#roadmap">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/presale.html">Presale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/howToBuy.html">How to Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/aboutUs.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                    </li>
+                    <li>
+                        <div style="width:10px;"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png" /></a>
+                    </li>
+                    <li>
+                        <div style="width:10px;"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
+                    </li>
+                </ul>
+                <a id="openMenu" class="btn btn-primary d-flex d-lg-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a> </div>
+            </nav>
+        </header>
+        <!--Mobile Nav-->
+        <div id="slideMenu" class="sidebar-pullout" style="background:#e6f4ff;">
+            <div style="padding: 10px; justify-content: space-around;" class="d-flex">
+                <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png" /></a>
+                <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
             </div>
-          </a>
-          </div>
-          <!--Mobile Logo-->
-          <div class="card d-block d-md-none"
-          <a class="navbar-brand" href="#" style="border:none;">
-            <div style="display: flex; align-items:center;">
-              <img height="50" src="imgs/icons/fish-token.png" />
-            </div>
-          </a>
-          </div>
-          <!--Web Nav-->
-          <ul class="navbar-nav d-none d-lg-flex" id="navFont">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Chart</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#roadmap">Roadmap</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/presale.html">Presale</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/howToBuy.html">How to Buy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/whitepaper.html">Whitepaper</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/aboutUs.html">About Us</a>
-            </li>
-          </ul>
-            <ul class="navbar-nav d-none d-lg-flex">
-              <li class="nav-item">
-                <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
-              </li>
-              <li><div style="width:10px;"></div></li>
-              <li class="nav-item">
-                <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
-              </li>
-              <li><div style="width:10px;"></div></li>
-              <li class="nav-item">
-                <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
-              </li>
+            <ul class="list-group">
+                <a style="text-decoration: none;" href="#">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li>
+                </a>
+                <a style="text-decoration: none;" href="#roadmap">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li>
+                </a>
+                <a style="text-decoration: none;" href="/presale.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li>
+                </a>
+                <a style="text-decoration: none;" href="/howToBuy.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li>
+                </a>
+                <a style="text-decoration: none;" href="/aboutUs.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li>
+                </a>
             </ul>
-            <a id="openMenu" class="btn btn-primary d-flex d-lg-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a>
         </div>
-
-      </nav>   
-  </header>
-    <!--Mobile Nav-->
-    <div id="slideMenu" class="sidebar-pullout"  style="background:#e6f4ff;">
-      <div style="padding: 10px; justify-content: space-around;" class="d-flex">
-        <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
-        <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
-        <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
-      </div>
-      <ul class="list-group">
-        <a style="text-decoration: none;" href="#"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li></a>
-        <a style="text-decoration: none;" href="#roadmap"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li></a>
-        <a style="text-decoration: none;" href="/presale.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li></a>
-        <a style="text-decoration: none;" href="/howToBuy.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li></a>
-        <a style="text-decoration: none;" href="/whitepaper.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Whitepaper</li></a>
-        <a style="text-decoration: none;" href="/aboutUs.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li></a>
-      </ul>
-    </div>
-    
-    <div class="top">
-      <div class="section"></div>
-      <div class="row">
-        
-        <div class="col-6">
-          <div class="main-title">
-            <img height="300" src="imgs/icons/mainTitle.png"/>
-          </div>
-        </div>
-        <div class="col-6"></div>
-      </div>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Contract Address</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="top" >
+            <div class="row d-none d-lg-flex">
+                <div class="col-6">
+                    <div class="main-title"> <img height="300" src="imgs/icons/mainTitle.png" /> </div>
+                </div>
             </div>
-            <div class="modal-body">
-              <p>0x652Ebb7B1A44Db09258a2C386b3E46E6D9c2B2f1</p>
+            <div class="main-title d-flex d-lg-none"> <img height="150" src="imgs/icons/mainTitle.png" /> </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Contract Address</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>0x652Ebb7B1A44Db09258a2C386b3E46E6D9c2B2f1</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="row d-none d-lg-flex">
+                <div class="col-5">
+                    <div class="call-to-action"> <a class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Contract</a>
+                    <form method="get" action="file.doc"><a class="btn btn-primary btn-lg" href="#" id="whitepaper">Whitepaper</a></form> <a class="btn btn-primary btn-lg" href="#">Buy Now</a> </div>
+                </div>
+            </div>
+            <div style="width: 60%; margin: auto;" class="call-to-action d-flex d-lg-none"> <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Contract</a> <form method="get" action="file.doc"><a class="btn btn-primary" href="#">Whitepaper</a></form> <a class="btn btn-primary" href="#">Buy Now</a> </div>
+            <div class="d-block d-lg-none section"></div>
+            <div class="section"></div>
+            <svg class="waves_animation" viewBox="0 0 120 28">
+                <defs>
+                    <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+                </defs>
+                <use id="wave3" class="waves" xlink:href="#wave" x="0" y="-2"></use>
+                <use id="wave2" fill="#a2d9ff" class="waves" xlink:href="#wave" x="0" y="0"></use>
+                <use id="wave1" class="waves" xlink:href="#wave" x="0" y="1" />
+            </svg>
         </div>
-      </div>
-      <div class="row">
-        
-        <div class="col-5">
-          <div class="call-to-action">
-            <a class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Contract</a>
-            <a class="btn btn-primary btn-lg" href="#">Whitepaper</a>
-            <a class="btn btn-primary btn-lg" href="#">Buy Now</a>
-          </div>
-        </div>
-      </div>
-      
-      <svg class="waves_animation" viewBox="0 0 120 28">
-        <defs> 
-          <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
-        </defs> 
-        <use id="wave3" class="waves" xlink:href="#wave" x="0" y="-2" ></use> 
-        <use id="wave2" fill="#a2d9ff"  class="waves" xlink:href="#wave" x="0" y="0" ></use>
-        <use id="wave1" class="waves" xlink:href="#wave" x="0" y="1" />
-      </svg>
-    </div>
-
-    <div class="bottom" style="height:100%; position: relative; overflow-x:hidden; ">
-      
-      <img class="fish" src="imgs/fishSprites/fish.png">
-      
-      <div class="container">
-        <p style="text-align: center; color: white;" class="display-4">Restore The Ocean with Crypto-Currency</p>
-        <p style="color: white; text-align: center; font-size:18px;">Fund Ocean Restoration and Research with Every Transaction</p>
-        <br><br><br>
-        <div class="section"></div>
-      </div>
-        <div style=" border-radius: 30px; padding: 25px;">
-          <div style="text-align: center; background: url('imgs/dolphin6.jpg'); background-size:cover; padding-bottom: 10px;" class="display-4">
-            <p style="background:#e6f4ff; padding-bottom:2%; padding-top: 2%; padding-left:10px; padding-right:10px; margin:0px; background-size: cover; color:black;">Presale Begins July 10th</p>
+        <div class="bottom">
             
-            <div style="height: 4vh;"></div>
-            <div style="height: 10vh;" class="d-none d-lg-block"></div>
-            <p style="color: white; color:white; font-size: 100px;" ><i id="presaleCountDown" style="font-family: 'Anton', sans-serif; font-style: normal;"></i></p>
-            <div style="height: 10vh;" class="d-none d-lg-block"></div>
-            <a href="#" class="btn btn-primary btn-lg">Go to Presale</a>
-            <div style="height: 2vh;"></div>
-          </div>
+            <img class="fish" src="imgs/fishSprites/fish.png">
+            <div class="container">
+                <div class="jumbo">
+                    <p style="text-align: center; color: white;" class="display-4">Restore The Ocean with $STRF</p>
+                    <p style="color: white; text-align: center; font-size:18px;">Fund Ocean Restoration and Research with Every Transaction</p>
+                </div>
+            </div>
+            <div style=" border-radius: 30px; padding: 25px;">
+                <div style="text-align: center; background: url('imgs/dolphin6.jpg'); background-size:cover; padding-bottom: 10px;" class="display-4">
+                    <p style="background:#e6f4ff; padding-bottom:2%; padding-top: 2%; padding-left:10px; padding-right:10px; margin:0px; background-size: cover; color:black;">Presale Begins July 10th</p>
+                    <div style="height: 4vh;"></div>
+                    <div style="height: 10vh;" class="d-none d-lg-block"></div>
+                    <p style="color: white; color:white; font-size: 100px;"><i id="presaleCountDown" style="font-family: 'Anton', sans-serif; font-style: normal;"></i></p>
+                    <div style="height: 10vh;" class="d-none d-lg-block"></div>
+                    <a href="#" class="btn btn-secondary btn-lg">Go to Presale</a>
+                    <div style="height: 2vh;"></div>
+                </div>
+            </div>
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="rewards">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div>
+                                <div style="height: 50vh; position: relative; overflow: hidden;"> 
+                                    <img width="40" height="40" class="falling-token" src="imgs/icons/white_logo.png" style="left: 30%;" /> 
+                                    <img width="55" height="55" class="falling-token" src="imgs/icons/white_logo.png" style="left: 80%; animation-delay: 0.8s; animation-duration: 3.5s; transform: rotate(40deg);" /> 
+                                    <img width="47" height="47" class="falling-token" src="imgs/icons/white_logo.png" style="left: 53%; animation-delay: 0.2s; animation-duration: 3.1s; transform: rotate(70deg);" /> 
+                                    <img width="47" height="47" class="falling-token" src="imgs/icons/white_logo.png" style="left: 10%; animation-delay: 0.4s; animation-duration: 3.4s; transform: rotate(12deg);" /> 
+                                </div>
+                                <p style="text-align: center; color:white;" class="display-5">Static Rewards</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12" id="piechart">
+                            <div>
+                                <div style="height: 50vh; position: relative; overflow: hidden;"> 
+                                    
+                                    <figure style="background:transparent;">
+	                                    <svg>
+		                                    <circle class="pie1" cx="50%" cy="50%" r="10%"/>
+	                                    </svg>
+                                    </figure>
+                                </div>
+                                <p style="text-align: center; color:white;" class="display-5">Deflationary</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div>
+                                <div style="height: 50vh; position: relative; overflow: hidden;"> 
+                                    
+                                    
+                                    <img width="300" class="octopus" src="imgs/octopus.png" 
+                                    style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);" /> 
+                                    
+                                </div>
+                                <p style="text-align: center; color:white;" class="display-5">Ocean Restoration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section"></div>
+            <div id="roadmap">
+                <div class="container">
+                    <!--Roadmap-->
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p style="text-align: center; color: white; padding-bottom:10px;" class="display-4">Roadmap</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                &nbsp;
+                            </div>
+                            <div class="col-8">
+                                <div class="timeline-content">
+                                    <ul class="timeline">
+                                        <li class="event">
+                                            <span class="date">July 10th 2021</span>
+                                            <strong>Starfish Presale</strong>
+                                            <p>Starfish Presale will start on July 10th of 2021. The initial presale will consist of 100 million tokens at a fixed price.</p>
+                                            <span class="dot"></span>
+                                        </li>
+                                        <li class="event">
+                                            <span class="date">August 2021</span>
+                                            <strong>Developer Tokens Lock</strong>
+                                            <p>We will be locking our tokens prior to public launch.</p>
+                                            <span class="dot"></span>
+                                        </li>
+                                        <li class="event">
+                                            <span class="date">August 2021</span>
+                                            <strong>PancakeSwap Public Launch</strong>
+                                            <p>Starfish will be publicly launched on PancakeSwap a month after the presale is concluded.</p>
+                                            <span class="dot"></span>
+                                        </li>
+                                        <li class="event">
+                                            <span class="date">2021</span>
+                                            <strong>Influencer Marketing</strong>
+                                            <p>Starfish will help to grow the community with influencer marketing.</p>
+                                            <span class="dot"></span>
+                                        </li>
+                                        <li class="event">
+                                            <span class="date">2021</span>
+                                            <strong>Supply Burn</strong>
+                                            <p>Starfish will burn roughly 50% of its total supply.</p>
+                                            <span class="dot"></span>
+                                        </li>
+                                        <div class="hidden">
+                                            <li class="event">
+                                                <span class="date">2021</span>
+                                                <strong>Exchange Expansion</strong>
+                                                <p>The token will be sold on more exchanges including Bitmart, Whitebit, Certik, CoinGecko,  CoinmarketCap, and etc.</p>
+                                                <span class="dot"></span>
+                                            </li>
+                                            <li class="event">
+                                                <span class="date">2021</span>
+                                                <strong>Partnerships</strong>
+                                                <p>We will be partnering with aquariums and marine research laboratories around the world to further our understanding of the marine environment.</p>
+                                                <span class="dot"></span>
+                                            </li>
+                                            <li class="event">
+                                                <span class="date">2022</span>
+                                                <strong>Starfish Wallets</strong>
+                                                <p>Starfish Wallet will be available for Android and IOS and consist of a secure wallet with Web3 integration.</p>
+                                                <span class="dot"></span>
+                                            </li>
+                                            <li class="event">
+                                                <span class="date">2022/2023</span>
+                                                <strong>Breaking Grounds on Headquarters</strong>
+                                                <p>Starfish’s first marine restoration location will be located on the coast of Florida.</p>
+                                                <span class="dot"></span>
+                                            </li>
+                                            <li class="event">
+                                                <span class="date">2022/2023</span>
+                                                <strong>Marine Research Tools</strong>
+                                                <p>The lab will be fully equipped with tools to perform our research.</p>
+                                                <span class="dot"></span>
+                                            </li>
+                                            <li class="event">
+                                                <span class="date">2022/2023</span>
+                                                <strong>Hire-on Staff</strong>
+                                                <p>We will be hiring a team of marine biologists, chemists, and lab technicians.</p>
+                                                <span class="dot"></span>
+                                            </li>
+                                            <li class="event">
+                                                <span class="date">2022/2023</span>
+                                                <strong>BlockChain</strong>
+                                                <p>Starfish will move to its own blockchain.</p>
+                                                <span class="dot"></span>
+                                            </li>
+                                            <li class="event">
+                                                <span class="date">2022/2023</span>
+                                                <strong>Internship Program</strong>
+                                                <p>Starfish will be open for up and coming Marine Biologists and we will be offering scholarships for talented students and possible full time job positions.</p>
+                                                <span class="dot"></span> 
+                                            </li>
+                                        </div>
+                                        <li class="event event-button">
+                                            <button class="btn btn-primary" type="button" id="collapse">Show More </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      <div class="container">
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="row">
-          <div class="col-4">
-            <div >
-              <div style="height: 50vh; position: relative; overflow: hidden;">
-                <img width="40" height="40" class="falling-token" src="imgs/icons/fish-token.png" style="left: 30%;"/>
-                <img width="55" height="55" class="falling-token" src="imgs/icons/fish-token.png" 
-                style="left: 80%; animation-delay: 0.8s; animation-duration: 2.5s; transform: rotate(40deg);"/>
-                <img width="47" height="47" class="falling-token" src="imgs/icons/fish-token.png" 
-                style="left: 53%; animation-delay: 0.2s; animation-duration: 2.1s; transform: rotate(70deg);"/>
-                <img width="47" height="47" class="falling-token" src="imgs/icons/fish-token.png" 
-                style="left: 10%; animation-delay: 0.4s; animation-duration: 2.4s; transform: rotate(12deg);"/>
-              </div>
-              <p style="text-align: center; color:white;" class="display-5">Static Rewards</p>
+        <footer style="">
+            <div  class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <small class="d-block mb-3 text-muted">Copyright © StarFish 2021</small>
+                    </div>
+                </div>
             </div>
-          </div>
-          
-          <div class="col-4">
-          </div>
-          <div class="col-4">
-          </div>
-        </div>
-        <div class="section"></div>
-        <!--Web Roadmap-->
-        <div class="row d-none d-md-flex">
-        <div class="container" id="roadmap">
-          <p style="text-align: center; color: white;" class="display-4">Roadmap</p>
-          <br>
-          <div class="timeline">
-            <h2 style="color:white; padding-left:50px; padding-bottom:20px;">2021</h2>
-            <div class="container left">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Starfish Presale</h2>
-                <p>Starfish Presale will start on July 10th of 2021. The initial presale will consist of 100 million tokens at a fixed price.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Pancake Swap Listing</h2>
-                <p>Starfish will be publicly launched on Pancake a month after the presale is concluded.</p>
-              </div>
-            </div>
-            <div class="container left">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Developer Tokens Lock</h2>
-                <p>We will be locking our tokens prior to public launch.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Influencer Marketing</h2>
-                <p>Starfish will help to grow the community with influencer marketing.</p>
-              </div>
-            </div>
-            <div class="container left">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Supply Burn</h2>
-                <p>Starfish will burn roughly 50% of its total supply.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Expansion to More Exchanges</h2>
-                <p>The token will be sold on more exchanges including Bitmart, Whitebit, Certik, CoinGecko,  CoinmarketCap, and etc.</p>
-              </div>
-            </div>
-            <div class="container left">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Partnerships</h2>
-                <p>We will be partnering with aquariums,  and marine research laboratories around the world to further our understanding of the marine environment.</p>
-              </div>
-            </div>
-            <h2 style="color:white; padding-left:50px; padding-top:20px; padding-bottom:20px;">2022/2023</h2>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Starfish Wallet</h2>
-                <p>Starfish Wallet will be available for Android and IOS and will consist of a secure wallet with Web3 integration.</p>
-              </div>
-            </div>
-            <div class="container left">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Breaking Grounds on Headquarters</h2>
-                <p>Starfish’s first marine restoration location will be located on the coast of Florida.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Marine Research Tools</h2>
-                <p>The lab will be fully equipped with tools to perform our research.</p>
-              </div>
-            </div>
-            <div class="container left">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Hire on Staff</h2>
-                <p>We will be hiring a team of marine biologists, chemists and lab technicians.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>BlockChain</h2>
-                <p>Starfish will move to its own blockchain.</p>
-              </div>
-            </div>
-            <div class="container left">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Internship Program</h2>
-                <p>This will be open for up and coming Marine Biologists and we will be offering scholarships for talented students and possible full time job positions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <!--Mobile Roadmap-->
-        <div class="card d-block d-md-none" style="background:transparent; border:none;">
-        <div class="container" id="roadmap">
-          <p style="text-align: center; color: white;" class="display-4">Roadmap</p>
-          <br>
-          <div class="timeline">
-            <h2 style="color:white; padding-left:50px; padding-bottom:20px;">2021</h2>
-            <div class="container right">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Starfish Presale</h2>
-                <p>Starfish Presale will start on July 10th of 2021. The initial presale will consist of 100 million tokens at a fixed price.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Pancake Swap Listing</h2>
-                <p>Starfish will be publicly launched on Pancake a month after the presale is concluded.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Developer Tokens Lock</h2>
-                <p>We will be locking our tokens prior to public launch.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Influencer Marketing</h2>
-                <p>Starfish will help to grow the community with influencer marketing.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Supply Burn</h2>
-                <p>Starfish will burn roughly 50% of its total supply.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Expansion to More Exchanges</h2>
-                <p>The token will be sold on more exchanges including Bitmart, Whitebit, Certik, CoinGecko,  CoinmarketCap, and etc.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Partnerships</h2>
-                <p>We will be partnering with aquariums,  and marine research laboratories around the world to further our understanding of the marine environment.</p>
-              </div>
-            </div>
-            <h2 style="color:white; padding-left:50px; padding-top:20px; padding-bottom:20px;">2022/2023</h2>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Starfish Wallet</h2>
-                <p>Starfish Wallet will be available for Android and IOS and will consist of a secure wallet with Web3 integration.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Breaking Grounds on Headquarters</h2>
-                <p>Starfish’s first marine restoration location will be located on the coast of Florida.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>Marine Research Tools</h2>
-                <p>The lab will be fully equipped with tools to perform our research.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Hire on Staff</h2>
-                <p>We will be hiring a team of marine biologists, chemists and lab technicians.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-gift"></i>
-              <div class="content">
-                <h2>BlockChain</h2>
-                <p>Starfish will move to its own blockchain.</p>
-              </div>
-            </div>
-            <div class="container right">
-              <i class="icon fa fa-home"></i>
-              <div class="content">
-                <h2>Internship Program</h2>
-                <p>This will be open for up and coming Marine Biologists and we will be offering scholarships for talented students and possible full time job positions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="section"></div>
-    </div>
-
-
-
-      </div>
-
-
-    </div>
-
-
-    <script src="script.js"></script>
-  </body>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/sidenav.js"></script>
+        <script src="js/timeline.js"></script>
+    </body>
 </html>

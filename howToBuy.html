@@ -1,204 +1,282 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>StarFish</title>
-
-    <!-- bootstrap -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- custom css -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="animations/sidebar.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <header style="background-color: #4CB944;"class="site-header fixed-top">
-      <!-- Navbar -->
-      <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">
-            <div style="display: flex; align-items:center;">
-              <p>Starfish</p>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>StarFish</title>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <!-- custom css -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/sidebar.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header style="background-color: #4CB944;" class="site-header fixed-top">
+            <!-- Navbar -->
+            <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+                <div class="container-fluid">
+                    <!--Web Logo-->
+                    <div class="row d-none d-md-flex">
+                        <a class="navbar-brand" href="#">
+                            <div style="display: flex; align-items:center;"> <img height="75" src="imgs/icons/fish-token.png" /> </div>
+                        </a>
+                    </div>
+                    <!--Mobile Logo-->
+                    <div class="card d-block d-md-none" 
+                    <a class="navbar-brand" href="#" style="border:none;">
+                        <div style="display: flex; align-items:center;"> <img height="50" src="imgs/icons/fish-token.png" /> </div>
+                    </a>
+                </div>
+                <!--Web Nav-->
+                <ul class="navbar-nav d-none d-lg-flex" id="navFont">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#roadmap">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/presale.html">Presale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/howToBuy.html">How to Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/aboutUs.html">About Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                    </li>
+                    <li>
+                        <div style="width:10px;"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png" /></a>
+                    </li>
+                    <li>
+                        <div style="width:10px;"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
+                    </li>
+                </ul>
+                <a id="openMenu" class="btn btn-primary d-flex d-lg-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a> </div>
+            </nav>
+        </header>
+        <!--Mobile Nav-->
+        <div id="slideMenu" class="sidebar-pullout" style="background:#e6f4ff;">
+            <div style="padding: 10px; justify-content: space-around;" class="d-flex">
+                <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png" /></a>
+                <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
             </div>
-          </a>
-          <!--Web Nav-->
-          <ul class="navbar-nav d-none d-md-flex" id="navFont">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Chart</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/index.html#roadmap">Roadmap</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/presale.html">Presale</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">How to Buy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/whitepaper.html">Whitepaper</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/aboutUs.html">About Us</a>
-            </li>
-          </ul>
-            <ul class="navbar-nav d-none d-md-flex">
-              <li class="nav-item">
-                <a href="#"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
-              </li>
-              <li><div style="width:10px;"></div></li>
-              <li class="nav-item">
-                <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
-              </li>
-              <li><div style="width:10px;"></div></li>
-              <li class="nav-item">
-                <a href="#"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
-              </li>
+            <ul class="list-group">
+                <a style="text-decoration: none;" href="#">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li>
+                </a>
+                <a style="text-decoration: none;" href="#roadmap">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li>
+                </a>
+                <a style="text-decoration: none;" href="/presale.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li>
+                </a>
+                <a style="text-decoration: none;" href="/howToBuy.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li>
+                </a>
+                <a style="text-decoration: none;" href="/aboutUs.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li>
+                </a>
             </ul>
-            <a id="openMenu" class="btn btn-primary d-flex d-md-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a>
+        </div>
+        <div id="presaleAlert" align="center">
+          <div id="popup">
+            <center>
+              <h2>Go to Presale</h2>
+            </center>
+          </div>
         </div>
 
-      </nav>   
-  </header>
-    <!--Mobile Nav-->
-    <div id="slideMenu" class="sidebar-pullout"  style="background:#e6f4ff;">
-      <div style="padding: 10px; justify-content: space-around;" class="d-flex">
-        <a href="#"><img width="35" height="35" src="imgs/icons/telegram.png"/></a>
-        <a href="#"><img width="35" height="35" src="imgs/icons/pancakeswap.png"/></a>
-        <a href="#"><img width="35" height="35" src="imgs/icons/twitter.png"/></a>
-      </div>
-      <ul class="list-group">
-        <a style="text-decoration: none;" href="#"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li></a>
-        <a style="text-decoration: none;" href="/index.html#roadmap"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li></a>
-        <a style="text-decoration: none;" href="/presale.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li></a>
-        <a style="text-decoration: none;" href="#"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li></a>
-        <a style="text-decoration: none;" href="/whitepaper.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Whitepaper</li></a>
-        <a style="text-decoration: none;" href="/aboutUs.html"><li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li></a>
-      </ul>
-    </div>
-
-    <br><br><br>
-
-    <div style="text-align: center;" class="container"id="htb">
-      <p class="display-5">How to Buy</p>
-      <hr style="height: 2px; color:black;">
-      <br>
-      <div class="row">
-        <div class="col">
-          <p class="display-6">Step 1: Install Trust Wallet</p>
+        <div id="howToBuy">
+        <div class="container text-center">
+            <p class="display-5">How to Buy</p>
+            <hr style="height: 2px; color:black;">
+            <section>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 d-flex flex-column justify-content-between">
+                        <div class="row">
+                            <div class="col">
+                                <p class="display-6">Step 1: Install Trust Wallet</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Install Trust Wallet is available on IOS and Android and will give the user easy access to the Binance Smart Chain.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://trustwallet.com/"><img style="width:100px;height:100px;" src="/imgs/icons/TWT.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-flex flex-column justify-content-between">
+                        <div class="row">
+                            <div class="col">
+                                <p class="display-6">Step 2: Get Binance Smart Chain</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>
+                                    Buy BNB using Binance.com or Trust Wallet. If using Binance.com, transfer the BNB to your Trust wallet. Click on the BNB on the Trust Wallet 'Wallet' tab and then click on the 'More' button. Click on 'Swap to Smart Chain' and then enter the amount of wanted BSC into the BNB field and then hit 'Swap'.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.binance.com/en"><img style="width:100px;height:100px;" src="/imgs/icons/BNB.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section>
+                    <!--web-->
+                    <div class="row d-none d-md-flex">
+                        <div class="col"><img src="/imgs/tutorial/BSC0.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/BSC1.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/BSC2.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/BSC3.png" style="height:350px;"/></div>
+                    </div>
+                    <!--mobile-->
+                    <div class="row d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
+                        <div class="col"><img src="/imgs/tutorial/BSC0.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/BSC1.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/BSC2.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/BSC3.png" style="width:90%;"/></div>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 d-flex flex-column justify-content-between">
+                        <div class="row">
+                            <div class="col">
+                                <p class="display-6">Step 3: Setup PancakeSwap</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Go to the <a href="https://exchange.pancakeswap.finance/#/swap">PancakeSwap Exchange</a>. Click 'Connect' and use the WalletConnect portal to connect your Trust wallet.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://exchange.pancakeswap.finance/#/swap"><img style="width:100px;height:100px;" src="/imgs/icons/pancakeswap.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-flex flex-column justify-content-between">
+                        <div class="row">
+                            <div class="col">
+                                <p class="display-6">Step 4: Swap BSC to STRF</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Click on 'Select a currency' in the 'To' field and paste the address, , into the 'Search name or paste address' field and click 'import'. Enter the amount of BNB to be traded in the 'From' field. Go to the exchange settings and set the slippage to 10%. Click 'Swap' and it should be completed.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.binance.com/en"><img style="width:100px;height:100px;" src="/imgs/icons/BNB.png"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section>
+                    <!--web-->
+                    <div class="row d-none d-md-flex">
+                        <div class="col"><img src="/imgs/tutorial/image0.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image1.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image2.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image3.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image4.png" style="height:350px;"/></div>
+                    </div>
+                    <!--mobile-->
+                    <div class="row d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
+                        <div class="col"><img src="/imgs/tutorial/image0.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image1.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image2.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image3.png" style="width:90%;;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/image4.png" style="width:90%;"/></div>
+                    </div>
+                    <!--web-->
+                    <!--
+                    <div class="row d-none d-md-flex">
+                        <div class="row" style="padding-top:20px;">
+                            <div class="col"><img src="/imgs/tutorial/PCS0.png" style="height:350px;"/></div>
+                            <div class="col"><img src="/imgs/tutorial/PCS1.png" style="height:350px;"/></div>
+                            <div class="col"><img src="/imgs/tutorial/PCS2.png" style="height:350px;"/></div>
+                            <div class="col" style="padding-top:20px;"><img src="/imgs/tutorial/PCS3.png" style="height:350px;"/></div>
+                        </div>
+                    </div>
+                    <!--mobile-->
+                    <!--
+                    <div class="row d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
+                        <div class="col"><img src="/imgs/tutorial/PCS0.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/PCS1.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/PCS2.png" style="width:90%;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/PCS3.png" style="width:90%;"/></div>
+                    </div>
+                    -->
+                </section>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col">
+                        <p class="display-6">Step 5: Add STRF to Trust wallet</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>STRF is a BEP20 coin that needs to be added to your Trust wallet portfolio manually. Click on the settings icon in the top right corner of the 'Wallet' tab. Scroll to the bottom and click 'Add Custom Token'. Set the Network to Smart Chain and paste the address, , into the Contract Address field. Set the Name to Starfish, Symbol to STRF, and the Decimals to 18. Click on 'Save' and Starfish should appear in your wallet.</p>
+                    </div>
+                </div>
+                <!--web-->
+                <div class="row d-none d-md-flex">
+                    <div class="row" style="padding-top:20px;">
+                        <div class="col"><img src="/imgs/tutorial/ADD0.png" style="height:350px;"/></div>
+                        <div class="col"><img src="/imgs/tutorial/ADD1.png" style="height:350px;"/></div>
+                        <!--
+                        <div class="col"><img src="/imgs/tutorial/ADD2.png" style="height:350px;"/></div>
+                        -->
+                    </div>
+                </div>
+                <!--mobile-->
+                <div class="card d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
+                    <div class="col"><img src="/imgs/tutorial/ADD0.png" style="width:90%;"/></div>
+                    <div class="col"><img src="/imgs/tutorial/ADD1.png" style="width:90%;"/></div>
+                    <!--
+                    <div class="col"><img src="/imgs/tutorial/ADD2.png" style="width:90%;"/></div>
+                    -->
+                </div>
+            </section>
         </div>
-        <div class="col">
-          <p class="display-6">Step 2: Get Binance Smart Chain (BSC)</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <p>Install Trust Wallet is available on IOS and Android and will give the user easy access to the Binance Smart Chain.</p>
-          <a href="https://trustwallet.com/"><img style="width:100px;height:100px;" src="/imgs/icons/TWT.png"/></a>
-        </div>
-        <div class="col">
-          <p>Buy BNB using Binance.com or Trust Wallet. If using Binance.com, transfer the BNB to your Trust wallet. Click on the BNB on the Trust Wallet 'Wallet' tab and then click on the 'More' button. Click on 'Swap to Smart Chain' and then enter the amount of wanted BSC into the BNB field and then hit 'Swap'.</p>
-          <a href="https://www.binance.com/en"><img style="width:100px;height:100px;" src="/imgs/icons/BNB.png"/></a>
-        </div>
-      </div>
-      <!--web-->
-      <div class="row d-none d-md-flex">
-        <div class="row" style="padding-top:20px;">
-          <div class="col"><img src="/imgs/tutorial/BSC0.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/BSC1.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/BSC2.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/BSC3.png" style="height:350px;"/></div>
-        </div>
-      </div>
-      <!--mobile-->
-      <div class="card d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
-          <div class="col"><img src="/imgs/tutorial/BSC0.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/BSC1.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/BSC2.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/BSC3.png" style="width:90%;"/></div>
-      </div>
-      <div class="section"></div>
-      <div class="row">
-        <div class="col">
-          <p class="display-6">Step 3: Setup PancakeSwap</p>
-        </div>
-        <div class="col">
-          <p class="display-6">Step 4: Swap BSC to STRF</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <p>Go to the <a href="https://exchange.pancakeswap.finance/#/swap">PancakeSwap Exchange</a>. Click 'Connect' and use the WalletConnect portal to connect your Trust wallet.</p>
-          <a href="https://exchange.pancakeswap.finance/#/swap"><img style="width:100px;height:100px;" src="/imgs/icons/pancakeswap.png"/></a>
-        </div>
-        <div class="col">
-          <p>Click on 'Select a currency' in the 'To' field and paste the address, , into the 'Search name or paste address' field and click 'import'. Enter the amount of BNB to be traded in the 'From' field. Go to the exchange settings and set the slippage to 10%. Click 'Swap' and it should be completed.</p>
-        </div>
-      </div>
-      <!--web-->
-      <div class="row d-none d-md-flex">
-        <div class="row" style="padding-top:20px;">
-          <div class="col"><img src="/imgs/tutorial/image0.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image1.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image2.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image3.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image4.png" style="height:350px;"/></div>
-        </div>
-      </div>
-      <!--mobile-->
-      <div class="card d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
-          <div class="col"><img src="/imgs/tutorial/image0.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image1.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image2.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image3.png" style="width:90%;;"/></div>
-          <div class="col"><img src="/imgs/tutorial/image4.png" style="width:90%;"/></div>
-      </div>
-      <!--web-->
-      <div class="row d-none d-md-flex">
-        <div class="row" style="padding-top:20px;">
-          <div class="col"><img src="/imgs/tutorial/PCS0.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/PCS1.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/PCS2.png" style="height:350px;"/></div>
-          <div class="col" style="padding-top:20px;"><img src="/imgs/tutorial/PCS3.png" style="height:350px;"/></div>
-        </div>
-      </div>
-      <!--mobile-->
-      <div class="card d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
-          <div class="col"><img src="/imgs/tutorial/PCS0.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/PCS1.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/PCS2.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/PCS3.png" style="width:90%;"/></div>
-      </div>
-      <div class="section"></div>
-      <div class="row">
-        <div class="col">
-          <p class="display-6">Step 5: Add STRF to Trust wallet</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <p>STRF is a BEP20 coin that needs to be added to your Trust wallet portfolio manually. Click on the settings icon in the top right corner of the 'Wallet' tab. Scroll to the bottom and click 'Add Custom Token'. Set the Network to Smart Chain and paste the address, , into the Contract Address field. Set the Name to Seedling, Symbol to STRF, and the Decimals to 18. Click on 'Save' and Starfish should appear in your wallet.</p>
-        </div>
-      </div>
-      <!--web-->
-      <div class="row d-none d-md-flex">
-        <div class="row" style="padding-top:20px;">
-          <div class="col"><img src="/imgs/tutorial/ADD0.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/ADD1.png" style="height:350px;"/></div>
-          <div class="col"><img src="/imgs/tutorial/ADD2.png" style="height:350px;"/></div>
-        </div>
-      </div>
-      <!--mobile-->
-      <div class="card d-block d-md-none" style="padding-top:20px; background-color:transparent; border:none;">
-          <div class="col"><img src="/imgs/tutorial/ADD0.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/ADD1.png" style="width:90%;"/></div>
-          <div class="col"><img src="/imgs/tutorial/ADD2.png" style="width:90%;"/></div>
-      </div>
-      <div class="section"></div>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+        <footer style="">
+            <div  class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <small class="d-block mb-3 text-muted">Copyright © StarFish 2021</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="js/sidenav.js"></script>
+    </body>
 </html>
