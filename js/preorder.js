@@ -1,10 +1,6 @@
 let arbitrary_amount = 50;
 let max_amount = 3000;
 
-function PopUp(){
-    document.getElementById('presaleAlert').style.display="none"; 
-}
-
 $(document).ready(function() {
   $("#rate").html(`1 Starfish = $${arbitrary_amount}`);
   $("#go").click(function() {
@@ -18,5 +14,4 @@ $(document).ready(function() {
       document.getElementById("price").style.color = "#ff0000";
     }
   })
-  setTimeout(function(){PopUp();},1000); //1 second from page load
 });
