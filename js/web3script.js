@@ -5,7 +5,7 @@ const BSCOptions = {
 }
 
 // Setting network to Smart Chain
-const fm = new Fortmatic('pk_live_97A12EDEAC7C6A26', BSCOptions);
+const fm = new Fortmatic('pk_live_930C2BA297402E88', BSCOptions);
 window.web3 = new Web3(fm.getProvider());
 
 const address = "0x652Ebb7B1A44Db09258a2C386b3E46E6D9c2B2f1"; 
