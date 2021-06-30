@@ -1,27 +1,30 @@
 <html>
     <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width">
+          <title>Starfish</title>
         <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- custom css -->
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/animations/sidebar.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
         
     </head>
     <body>
         <header style="background-color: #4CB944;" class="site-header fixed-top">
             <!-- Navbar -->
             <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-                <div class="container-fluid">
+                <div class="container-fluid" style="padding-right:0px;">
                     <!--Web Logo-->
                     <div class="row d-none d-md-flex">
-                        <a class="navbar-brand" href="index.html">
-                            <div style="display: flex; align-items:center;"> <img height="75" src="imgs/icons/fish-token.png" /> </div>
+                        <a class="navbar-brand" href="#">
+                            <div style="display: flex; align-items:center;"> <img height="75" src="imgs/starfish_logo.png" /> </div>
                         </a>
                     </div>
                     <!--Mobile Logo-->
                     <div class="card d-block d-md-none" 
-                    <a class="navbar-brand" href="index.html" style="border:none;">
+                    <a class="navbar-brand" href="#" style="border:none;">
                         <div style="display: flex; align-items:center;"> <img height="50" src="imgs/icons/fish-token.png" /> </div>
                     </a>
                 </div>
@@ -31,13 +34,13 @@
                         <a class="nav-link active" href="#">Chart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#roadmap">Roadmap</a>
+                        <a class="nav-link active" href="/index.html#roadmap">Roadmap</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/presale.html">Presale</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/howToBuy.html">How to Buy</a>
+                        <a class="nav-link active" href="/htbps.html">How to Buy</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/aboutUs.html">About Us</a>
@@ -60,7 +63,8 @@
                         <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
                     </li>
                 </ul>
-                <a id="openMenu" class="btn btn-primary d-flex d-lg-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a> </div>
+                <a id="openMenu" class="btn btn-primary d-flex d-lg-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a>
+                </div>
             </nav>
         </header>
         <!--Mobile Nav-->
@@ -74,13 +78,13 @@
                 <a style="text-decoration: none;" href="#">
                     <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li>
                 </a>
-                <a style="text-decoration: none;" href="#roadmap">
+                <a style="text-decoration: none;" href="/index.html#roadmap">
                     <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li>
                 </a>
                 <a style="text-decoration: none;" href="/presale.html">
                     <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li>
                 </a>
-                <a style="text-decoration: none;" href="/howToBuy.html">
+                <a style="text-decoration: none;" href="/htbps.html">
                     <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li>
                 </a>
                 <a style="text-decoration: none;" href="/aboutUs.html">
@@ -89,23 +93,45 @@
             </ul>
         </div>
         <section>
+
             <div class="container" align="center">
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Accounts</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body" id="accounts">
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
               <h1 class="display-4">Presale</h1>
               <br><br>
               <div class="row" style="width:25%;">
                 <button class="btn btn-warning" id="connect">Connect</button>
               </div>
               <br>
-              <p id="address"></p>
+
               <br>
               <div class="collapse" id="buyCalc">
+                <div style="display: flex; justify-content: center;">
+                  <p style="margin-right: 15px;" id="address"></p>
+                  
+                </div>
+                <div style="display: flex; justify-content: center;">
+                  <p>Total BNB : </p>
+                  <p id="balance" style="height:100%; padding-left:20px; padding-right:20px; text-align:center;">Connect Wallet</p>
+                </div>
                 <div class="row" style="width:70%;">
                   <div class="col">
                     <div class="investment">
                       <div class="input-group">
-                      <input type="number" step="0.1" class="form-control" placeholder="Investment Amount ($)" id="investment-amount"/>
-                      <p style="padding-left: 20px; padding-right: 20px;">connect wallet</p>
-                      <button class="btn btn-success" type="button" id="go">GO</button></div>
+                      <input type="number" step="0.1" min="0" class="form-control" placeholder="Investment Amount (BNB)" id="investment-amount"/>
+                      
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -113,7 +139,8 @@
                 <div class="row" style="width:70%;">
                   <div class="col">
                     <div class="input-group">
-                    <input class="form-control" id="coins" type="number"/>
+                    <p style="position:absolute; transform:;">Starfish:</p>
+                    <input class="form-control" placeholder="Investment Amount (Starfish)" id="coins" type="number"/>
                     <button class="btn btn-success" id="buy">Buy</button>
                     </div>
                   </div>

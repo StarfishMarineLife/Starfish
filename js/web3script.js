@@ -57,9 +57,10 @@ async function connect(){
   window.contract = await loadContract()
   console.log(window.contract.methods);
   state.tokenPrice = Number(await window.contract.methods.presalePrice().call());
-
+  state.userBalance = await window.web3.eth.getBalance(window.accounts[0]);
   if(state.hasEth){
-    document.getElementById("connect").innerHTML = "connected";
+    document.getElementById("balance").innerHTML = (state.userBalance / (10**18)).toFixed(4)+" BNB";
+    document.getElementById("connect").innerHTML = "Connected";
     document.getElementById("connect").style.backgroundColor = "";
     document.getElementById("address").innerHTML = window.accounts[0];
     var myCollapse = document.getElementById('buyCalc')

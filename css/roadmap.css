@@ -4,7 +4,6 @@
 }
 
 
-
 /* Timeline */
 
 .timeline {
@@ -23,8 +22,7 @@
 .timeline .event {
   margin-bottom: 46px;
   position: relative;
-
-  
+  padding-top: -20px;
 }
 
 .hidden {
@@ -48,8 +46,8 @@
 .timeline .event .date {
   position: absolute;
   display: block;
-  top: 0;
-  left: -176.5px;
+  top: -7px;
+  left: -150px;
   color: white;
   text-align: right;
   font-weight: 100;

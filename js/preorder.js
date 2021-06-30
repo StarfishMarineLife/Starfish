@@ -1,8 +1,9 @@
-let arbitrary_amount = 50;
-let max_amount = 3000;
+let arbitrary_amount = 0.0001;
+let max_amount = 10;
+let price = 0;
 
 $(document).ready(function() {
-  $("#rate").html(`1 Starfish = $${arbitrary_amount}`);
+  $("#rate").html(`1 Starfish = ${arbitrary_amount} BNB`);
   $("#go").click(function() {
     let amount = Number($("#investment-amount").val());
     if (amount > 0 && amount <= max_amount){
@@ -13,5 +14,20 @@ $(document).ready(function() {
       $("#price").html(`Enter an amount between 0 and ${max_amount}.`)
       document.getElementById("price").style.color = "#ff0000";
     }
-  })
-});
+  });
+
+  document.getElementById("investment-amount").addEventListener('change', ()=>{
+    $("#coins").val(Number($("#investment-amount").val())/arbitrary_amount);
+  });
+  document.getElementById("coins").addEventListener('change', ()=>{
+    $("#investment-amount").val(Number($("#coins").val())*arbitrary_amount);
+  });
+  
+  $("#investment-amount").keyup(function () {
+    $("#coins").val(Number($("#investment-amount").val())/arbitrary_amount);
+  });
+  
+  $("#coins").keyup(function () {
+    $("#investment-amount").val(Number($("#coins").val())*arbitrary_amount);
+  });
+});    
