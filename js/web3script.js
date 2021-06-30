@@ -18,6 +18,7 @@ async function onPageLoad(){
   bnb_data = JSON.parse(bnb_data);
   state.bnbUSD = Number(bnb_data.price);
   console.log(state.bnbUSD);
+  document.getElementById("bnbPrice").innerHTML = "1 BNB = $"+state.bnbUSD;
 }
 onPageLoad();
 
@@ -86,7 +87,11 @@ coins.addEventListener("change", updateCharge);
 buyBtn = document.getElementById('buy');
 async function buy(){
   console.log("here");
-  state.totalPrice = 100;
+  state.totalPrice = (Number(coins.value)*0.0001)*(10**18);
+  if(state.userBalance < state.totalPrice){
+    $('#exampleModal').modal('show')
+    return;
+  }
   output = await window.contract.methods.buy().send({
     from: window.accounts[0],
     value: state.totalPrice

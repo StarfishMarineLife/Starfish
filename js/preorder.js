@@ -17,17 +17,17 @@ $(document).ready(function() {
   });
 
   document.getElementById("investment-amount").addEventListener('change', ()=>{
-    $("#coins").val(Number($("#investment-amount").val())/arbitrary_amount);
+    $("#coins").val((Number($("#investment-amount").val())/arbitrary_amount).toFixed(7).replace(/\.?0+$/, ''));
   });
   document.getElementById("coins").addEventListener('change', ()=>{
-    $("#investment-amount").val(Number($("#coins").val())*arbitrary_amount);
+    $("#investment-amount").val((Number($("#coins").val())*arbitrary_amount).toFixed(7).replace(/\.?0+$/, ''));
   });
   
   $("#investment-amount").keyup(function () {
-    $("#coins").val(Number($("#investment-amount").val())/arbitrary_amount);
+    $("#coins").val((Number($("#investment-amount").val())/arbitrary_amount).toFixed(7).replace(/\.?0+$/, ''));
   });
   
   $("#coins").keyup(function () {
-    $("#investment-amount").val(Number($("#coins").val())*arbitrary_amount);
+    $("#investment-amount").val((Number($("#coins").val())*arbitrary_amount).toFixed(7).replace(/\.?0+$/, ''));
   });
 });    
