@@ -1,5 +1,5 @@
 function updateTime(){
-  var countDownDate = new Date("Jul 10, 2021 0:0:0").getTime();
+  var countDownDate = new Date("Jul 15, 2021 0:0:0").getTime();
   var now = new Date().getTime();
   var timeleft = countDownDate - now;
     
