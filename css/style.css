@@ -170,6 +170,11 @@ a{
   background-position:center;
 }
 
+#about h1 img{
+  height: 25px;
+  width: 25px;
+}
+
 #presaleAlert {
     position: fixed;
     top: 0;

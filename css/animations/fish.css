@@ -10,17 +10,43 @@
   }
 }
 
+@keyframes fish_swim_reverse{
+  0%{
+    right: 150%
+  }
+  75%{
+    right: -20%;
+  }
+  100%{
+    right: -50%;
+  }
+}
+
 .fish{
   right: 120%;
   top: 3.5%;
   width: 100px;
-  hieght: auto;
+  height: auto;
   animation-name: fish_swim;
   animation-duration: 11s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   z-index: -1;
   position: absolute;
+}
+.fish-reverse{
+  right: 120%;
+  top: 40%;
+  width: 140px;
+  height: auto;
+  animation-name: fish_swim_reverse;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: -1;
+  position: absolute;
+  animation-delay: 1.5s;
+
 }
 .fishContainer{
   width: 100%;

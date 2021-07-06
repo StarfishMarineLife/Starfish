@@ -13,12 +13,22 @@ var state = {};
 
 
 async function onPageLoad(){
+  window.web3 = new Web3(window.ethereum);
+  contract = await loadContract();
+
+  
+  presaleStarted = await contract.methods.presale().call()
+  if(!presaleStarted){
+    document.getElementById("presaleWarning").style.display = "block";
+  }
   priceData = await fetch("https://api.binance.com/api/v1/ticker/price?symbol=BNBUSDT");
   bnb_data = await priceData.text();
   bnb_data = JSON.parse(bnb_data);
   state.bnbUSD = Number(bnb_data.price);
   console.log(state.bnbUSD);
   document.getElementById("bnbPrice").innerHTML = "1 BNB = $"+state.bnbUSD;
+
+
 }
 onPageLoad();
 
@@ -31,7 +41,7 @@ async function loadContract(){
 async function loadWeb3() {
   if (window.ethereum) {
     await window.ethereum.request({method:'eth_requestAccounts'});
-    window.web3 = new Web3(window.ethereum);
+
     return true;
   }
   return false;
