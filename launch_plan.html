@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Starfish</title>
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- custom css -->
+        <link href="css/animations/waves.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/sidebar.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/static-rewards.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/piechart.css" rel="stylesheet" type="text/css" />
+        <link href="css/animations/fish.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/roadmap.css" rel="stylesheet" type="text/css" />
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <meta name="fortmatic-site-verification" content="dFGdBIKUeGdHs0jT" />
+    </head>
+    <body>
+        <header style="background-color: #4CB944;" class="site-header fixed-top">
+            <!-- Navbar -->
+            <nav style="border-bottom: 1px solid white;" class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
+                <div class="container-fluid" style="padding-right:0px;">
+                    <!--Web Logo-->
+                    <div class="row d-none d-md-flex">
+                        <a class="navbar-brand" href="#">
+                            <div style="display: flex; align-items:center;"> <img height="75" src="imgs/starfish_logo.png" /> </div>
+                        </a>
+                    </div>
+                    <!--Mobile Logo-->
+                    <div class="d-flex d-md-none">
+                    <a class="navbar-brand" href="index.html" style="border:none;">
+                        <div style="display: flex; align-items:center;"> <img height="50" src="imgs/starfish_logo.png" /> </div>
+                    </a>
+                    
+                    </div>
+                <!--Web Nav-->
+                <ul class="navbar-nav d-none d-lg-flex" id="navFont">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://charts.bogged.finance/?token=0x652Ebb7B1A44Db09258a2C386b3E46E6D9c2B2f1">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#roadmap">Roadmap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/presale.html">Presale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/htbps.html">How to Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/aboutUs.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" target="_blank" href="starfishWhitepaper.pdf">Whitepaper</a>
+                    </li>
+                </ul>
+                <ul style="margin-right: 10px;" class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item">
+                        <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                    </li>
+                    <li>
+                        <div style="width:10px;"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
+                    </li>
+                </ul>
+                <a id="openMenu" class="btn btn-primary d-flex d-lg-none" style="background:transparent; border:none; height:100%;"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+        </header>
+        <!--Mobile Nav-->
+        <div id="slideMenu" class="sidebar-pullout" style="background:#e6f4ff;">
+            <div style="padding: 10px; justify-content: space-around;" class="d-flex">
+                <a href="https://t.me/starfishmarinelife"><img width="35" height="35" src="imgs/icons/telegram.png" /></a>
+                <a href="https://twitter.com/StarfishCoin"><img width="35" height="35" src="imgs/icons/twitter.png" /></a>
+            </div>
+            <ul class="list-group">
+                <a style="text-decoration: none;" href="https://charts.bogged.finance/?token=0x652Ebb7B1A44Db09258a2C386b3E46E6D9c2B2f1">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Chart</li>
+                </a>
+                <a style="text-decoration: none;" href="#roadmap">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Roadmap</li>
+                </a>
+                <a style="text-decoration: none;" href="/presale.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Presale</li>
+                </a>
+                <a style="text-decoration: none;" href="/htbps.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">How to Buy</li>
+                </a>
+                <a style="text-decoration: none;" href="/aboutUs.html">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">About Us</li>
+                </a>
+                <a style="text-decoration: none;" href="/starfishWhitepaper.pdf">
+                    <li style="border-bottom: 1px solid white;" class="list-group-item menu-link">Whitepaper</li>
+                </a>
+            </ul>
+        </div>
+    </body>
