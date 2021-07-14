@@ -11,7 +11,7 @@
         <link href="css/animations/waves.css" rel="stylesheet" type="text/css" />
         <link href="css/animations/sidebar.css" rel="stylesheet" type="text/css" />
         <link href="css/animations/static-rewards.css" rel="stylesheet" type="text/css" />
-        <link href="css/animations/piechart.css" rel="stylesheet" type="text/css" />
+        <link href="css/pieChart.css" rel="stylesheet" type="text/css" />
         <link href="css/animations/fish.css" rel="stylesheet" type="text/css" />
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/roadmap.css" rel="stylesheet" type="text/css" />
@@ -19,7 +19,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <meta name="fortmatic-site-verification" content="dFGdBIKUeGdHs0jT" />
+        <style>
+          .card{
+            margin: 5%;
+          }
+        </style>
     </head>
     <body>
         <header style="background-color: #4CB944;" class="site-header fixed-top">
@@ -28,7 +34,7 @@
                 <div class="container-fluid" style="padding-right:0px;">
                     <!--Web Logo-->
                     <div class="row d-none d-md-flex">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="index.html">
                             <div style="display: flex; align-items:center;"> <img height="75" src="imgs/starfish_logo.png" /> </div>
                         </a>
                     </div>
@@ -102,4 +108,104 @@
                 </a>
             </ul>
         </div>
+        <div>
+          
+          <p style="text-align: center; background-color: #3289fc; color: white; padding: 30px;" class="display-4">Launch Plan</p>
+          <div class="row">
+            <div style="height: 10vh;" class="d-none d-md-block"></div>
+
+            <div style="height: 10vh;" class="d-none d-md-block"></div>
+            <div style="text-align: center; margin-top: 60px;" class="col-sm-12 col-md-6 col-lg-6">
+              <div style="margin-left: 10%; margin-right: 10%;"class="card">
+                <div class="card-header">
+                  <p class="display-6">Presale</p>
+                </div>
+              <div class="card-body">
+                <p class="d-none d-lg-block" style="margin: 50px;">The Presale will begin on august 1st, and will aim for 300,000,000 sold at a fixed price of 0.0004 bnb per token. The bnb will be divided in the following ratio: 60% to the liquidity pool, 15% to marketing, 15% for startup costs to the marine research center, and 10% to the developement of the starfish wallet and blockchain. In the event the presale is concluded early this ratio will remain unchanged.<br> <b>Coins sold during presale will be sold without a tax fee.</b></p>
+                <p class="d-block d-lg-none">The Presale will begin on august 1st, and will aim for 300,000,000 sold at a fixed price of 0.0004 bnb per token. The bnb will be divided in the following ratio: 60% to the liquidity pool, 15% to marketing, 15% for startup costs to the marine research center, and 10% to the developement of the starfish wallet and blockchain. In the event the presale is concluded early this ratio will remain unchanged.<br> <b>Coins sold during presale will be sold without a tax fee.</b></p>
+              </div>
+              </div>
+            </div>
+            
+            <div style="margin: auto;" class="col-sm-12 col-md-6 col-lg-6">
+                
+                <section>
+                  
+                  <div style="margin-left: 20%;" class="pieID pie">
+                    
+                  </div>
+                  <ul style="margin-left: 20%;" class="pieID legend">
+                    <li>
+                      <em>Liquidity pool</em>
+                      <span>60%</span>
+                    </li>
+                    <li>
+                      <em>Marketing</em>
+                      <span>15%</span>
+                    </li>
+                    <li>
+                      <em>Research</em>
+                      <span>15%</span>
+                    </li>
+                    <li>
+                      <em>Development</em>
+                      <span>10%</span>
+                    </li>
+                  </ul>
+                </section>
+            </div>
+            <div style="height: 20vh;" class="d-none d-md-block"></div>
+          </div>
+          <div style="height: 20vh"></div>
+          <p style="text-align: center;" class="display-6">Why have a presale?</p>
+          <div style="max-width: 75%; margin: auto;" class="card-group">
+            
+              <div class="card">
+                <div class="card-header">
+                  <p style="font-size: 150%; ">Limit whales</p>
+                </div>
+                <div class="card-body">
+                  <p>A presale ensures that all early buyers will purchess at the same price ensuring that no one aquires an unfair share of the supply.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <p style="font-size: 150%; ">Better Marketing</p>
+                </div>
+                <div class="card-body">
+                  <p>A presale will provide capital, that will allow for a larger marketing budget, which will allow the starfish name gain notoriety, as well as bring attention the coral reef crisis.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <p style="font-size: 150%; ">Jump Start Development</p>
+                </div>
+                <div class="card-body">
+                  <p>Capital from the presale will help to fast track the release of the starfish offical wallet as well as the move of starfish from bsc smart chain to its own chain while perserving the balance of all wallets</p>
+                </div>
+              </div>
+              
+             
+              
+          </div>
+          <div style="height: 20vh"></div>
+          <div class="row">
+            <div style="text-align: center; margin-top: 60px;" class="col-sm-12 col-md-6 col-lg-6">
+              <div style="margin-left: 10%; margin-right: 10%;" class="card">
+                  <div class="card-header">
+                    <p class="display-6">Official Launch</p>
+                  </div>
+                <div class="card-body">
+                  <p class="d-none d-lg-block" style="margin: 50px;">The official launch will pair 60% of the BNB from the presale with 50% of the number of tokens from presale on pancakeswap. This will allow those who purchessed at presale to have a return on investment. This liquidity will be permently burned to help insure the success of the project. During the official launch is also when tax on tokens will go into effect. This is also when their will be a large increase in the amount of marketing for the coin as it will be funded in part by the presale.</p>
+                  <p class="d-block d-lg-none">The official launch will pair 60% of the BNB from the presale with 50% of the number of tokens from presale on pancakeswap. This will allow those who purchessed at presale to have a return on investment. This liquidity will be permently burned to help insure the success of the project. During the official launch is also when tax on tokens will go into effect. This is also when their will be a large increase in the amount of marketing for the coin as it will be funded in part by the presale.</p>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px;" class="col-sm-12 col-md-6 col-lg-6">
+              <center><img style="width: 75%; height: auto; margin-top: 20px;"src="imgs/rocket.jpg"/></center>
+            </div>
+          </div>
+        </div>
+      <script src="js/pie.js"></script>
+      <script src="js/sidenav.js"></script>
     </body>
