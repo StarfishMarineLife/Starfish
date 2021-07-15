@@ -1,4 +1,4 @@
-let arbitrary_amount = 0.0001;
+let arbitrary_amount = 0.00004;
 let max_amount = 10;
 let price = 0;
 

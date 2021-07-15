@@ -12,15 +12,16 @@ const address = "0x652Ebb7B1A44Db09258a2C386b3E46E6D9c2B2f1";
 var state = {};
 
 
-async function onPageLoad(){
-  window.web3 = new Web3(window.ethereum);
+async function onConnect(){
   contract = await loadContract();
 
   
-  presaleStarted = await contract.methods.presale().call()
-  if(!presaleStarted){
-    document.getElementById("presaleWarning").style.display = "block";
-  }
+
+}
+
+async function onPageLoad(){
+
+
   priceData = await fetch("https://api.binance.com/api/v1/ticker/price?symbol=BNBUSDT");
   bnb_data = await priceData.text();
   bnb_data = JSON.parse(bnb_data);
@@ -59,13 +60,48 @@ const ethEnabled = async () => {
 }
 
 
+const Web3Modal = window.Web3Modal.default;
+const WalletConnectProvider = window.WalletConnectProvider.default;
+  const providerOptions = {
+    walletconnect: {
+      package: WalletConnectProvider,
+      options: {
+        rpc: {
+          56: "https://bsc-dataseed.binance.org/"
+        },
+      }
+    },
+  };
+  
+  web3Modal = new Web3Modal({
+    cacheProvider: false, // optional
+    providerOptions, // required
+    disableInjectedProvider: true, // optional. For MetaMask / Brave / Opera.
+  });
+async function walletConnect(){
+  
+  console.log(window.WalletConnectProvider)
+  provider = await web3Modal.connect();
+  window.web3 = new Web3(provider);
+  connect();
+}
+document.getElementById("walletConnect").addEventListener('click', walletConnect);
 
+async function connectMetamask(){
+  window.web3 = new Web3(window.ethereum);
+  connect();
+}
 
 
 async function connect(){
   console.log("connect called");
   state.hasEth = await ethEnabled();
   window.contract = await loadContract()
+  presaleStarted = await contract.methods.presale().call()
+  if(!presaleStarted){
+    //document.getElementById("presaleWarning").style.display = "block";
+    //return;
+  }
   console.log(window.contract.methods);
   state.tokenPrice = Number(await window.contract.methods.presalePrice().call());
   state.userBalance = await window.web3.eth.getBalance(window.accounts[0]);
@@ -82,7 +118,7 @@ async function connect(){
   }
 }
 connectBtn = document.getElementById("connect");
-connectBtn.addEventListener('click', connect);
+connectBtn.addEventListener('click', connectMetamask);
 
 coins = document.getElementById("coins");
 price = document.getElementById("price");
@@ -97,7 +133,7 @@ coins.addEventListener("change", updateCharge);
 buyBtn = document.getElementById('buy');
 async function buy(){
   console.log("here");
-  state.totalPrice = (Number(coins.value)*0.0001)*(10**18);
+  state.totalPrice = (Number(coins.value)*0.00004)*(10**18);
   if(state.userBalance < state.totalPrice){
     $('#exampleModal').modal('show')
     return;

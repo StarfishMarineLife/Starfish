@@ -1,19 +1,24 @@
+const Web3Modal = window.Web3Modal.default;
+console.log(window.WalletConnectProvider)
+const WalletConnectProvider = window.WalletConnectProvider.default;
   const providerOptions = {
     walletconnect: {
       package: WalletConnectProvider,
       options: {
-        // Mikko's test key - don't copy as your mileage may vary
         rpc: {
           56: "https://bsc-dataseed.binance.org/"
         },
       }
     },
-
-    fortmatic: {
-      package: Fortmatic,
-      options: {
-        // Mikko's TESTNET api key
-        key: "pk_test_391E26A3B43A3350"
-      }
-    }
   };
+web3Modal = new Web3Modal({
+  cacheProvider: false, // optional
+  providerOptions, // required
+  disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
+});
+async function start(){
+  console.log(web3Modal);
+  provider = await web3Modal.connect();
+}
+
+document.getElementById("connect").addEventListener('click', start);
