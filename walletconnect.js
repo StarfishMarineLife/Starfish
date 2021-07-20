@@ -21,4 +21,4 @@ async function start(){
   provider = await web3Modal.connect();
 }
 
-document.getElementById("connect").addEventListener('click', start);
+//document.getElementById("connect").addEventListener('click', start);

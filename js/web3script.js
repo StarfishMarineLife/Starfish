@@ -1,3 +1,6 @@
+const Web3Modal = window.Web3Modal.default;
+const WalletConnectProvider = window.WalletConnectProvider.default;
+
 const BSCOptions = {
   /* Smart Chain mainnet RPC URL */
   rpcUrl: 'https://bsc-dataseed.binance.org/', 
@@ -5,8 +8,10 @@ const BSCOptions = {
 }
 
 // Setting network to Smart Chain
-const fm = new Fortmatic('pk_live_930C2BA297402E88', BSCOptions);
-window.web3 = new Web3(fm.getProvider());
+//pk_live_0DAEF5EDC371063B test
+//pk_live_930C2BA297402E88 live
+const fm = new Fortmatic('pk_live_0DAEF5EDC371063B', BSCOptions);
+
 
 const address = "0x652Ebb7B1A44Db09258a2C386b3E46E6D9c2B2f1"; 
 var state = {};
@@ -39,83 +44,81 @@ async function loadContract(){
   return contract
 }
 
-async function loadWeb3() {
-  if (window.ethereum) {
-    await window.ethereum.request({method:'eth_requestAccounts'});
 
-    return true;
-  }
-  return false;
-}
 
 const ethEnabled = async () => {
-  if (window.ethereum) {
-    window.accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
-    console.log(window.accounts);
-    window.web3 = new Web3(window.ethereum);
-    return true;
-  }
+
   console.log("fail");
   return false;
 }
 
 
-const Web3Modal = window.Web3Modal.default;
-const WalletConnectProvider = window.WalletConnectProvider.default;
-  const providerOptions = {
-    walletconnect: {
+
+async function walletConnect(){
+  providerOptions = {walletconnect: {
       package: WalletConnectProvider,
       options: {
         rpc: {
           56: "https://bsc-dataseed.binance.org/"
         },
       }
-    },
-  };
-  
-  web3Modal = new Web3Modal({
-    cacheProvider: false, // optional
+    }
+  }
+  provider = new Web3Modal({
+     // optional
     providerOptions, // required
     disableInjectedProvider: true, // optional. For MetaMask / Brave / Opera.
   });
-async function walletConnect(){
-  
+  console.log("provider ready to enable")
+  //  Enable session (triggers QR Code modal)
+  console.log("provider enabled")
   console.log(window.WalletConnectProvider)
-  provider = await web3Modal.connect();
+  await web3Modal.connect();
   window.web3 = new Web3(provider);
+  console.log("yup")
   connect();
 }
 document.getElementById("walletConnect").addEventListener('click', walletConnect);
 
 async function connectMetamask(){
-  window.web3 = new Web3(window.ethereum);
+  if (window.ethereum) {
+    window.accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
+    console.log(window.accounts);
+    window.web3 = new Web3(window.ethereum);
+  }
+  else{
+    alert("you do not have metamask")
+    return;
+  }
   connect();
 }
 
 
 async function connect(){
   console.log("connect called");
-  state.hasEth = await ethEnabled();
   window.contract = await loadContract()
   presaleStarted = await contract.methods.presale().call()
+  console.log("presale started")
   if(!presaleStarted){
     //document.getElementById("presaleWarning").style.display = "block";
     //return;
   }
   console.log(window.contract.methods);
   state.tokenPrice = Number(await window.contract.methods.presalePrice().call());
+  console.log("tokenPrice obtained: "+state.tokenPrice);
   state.userBalance = await window.web3.eth.getBalance(window.accounts[0]);
-  if(state.hasEth){
-    document.getElementById("balance").innerHTML = (state.userBalance / (10**18)).toFixed(4)+" BNB";
-    document.getElementById("connect").innerHTML = "Connected";
-    document.getElementById("connect").style.backgroundColor = "";
-    document.getElementById("address").innerHTML = window.accounts[0];
-    var myCollapse = document.getElementById('buyCalc')
-    var bsCollapse = new bootstrap.Collapse(myCollapse, {
-      toggle: false
-    })    
-    bsCollapse.show();
-  }
+  console.log("")
+  
+  document.getElementById("balance").innerHTML = (state.userBalance / (10**18)).toFixed(4)+" BNB";
+  document.getElementById("connect").innerHTML = "Connected";
+  document.getElementById("connect").style.backgroundColor = "";
+  document.getElementById("address").innerHTML = window.accounts[0];
+  var myCollapse = document.getElementById('buyCalc')
+  var bsCollapse = new bootstrap.Collapse(myCollapse, {
+    toggle: false
+  })    
+  bsCollapse.show();
+  
 }
 connectBtn = document.getElementById("connect");
 connectBtn.addEventListener('click', connectMetamask);
