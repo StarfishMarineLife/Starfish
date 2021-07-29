@@ -78,7 +78,6 @@ async function walletConnect(){
   console.log("yup")
   connect();
 }
-document.getElementById("walletConnect").addEventListener('click', walletConnect);
 
 async function connectMetamask(){
   if (window.ethereum) {
@@ -99,9 +98,10 @@ async function connect(){
   window.contract = await loadContract()
   presaleStarted = await contract.methods.presale().call()
   console.log("presale started")
+  console.log(presaleStarted)
   if(!presaleStarted){
-    //document.getElementById("presaleWarning").style.display = "block";
-    //return;
+    document.getElementById("presaleWarning").style.display = "block";
+    return;
   }
   console.log(window.contract.methods);
   state.tokenPrice = Number(await window.contract.methods.presalePrice().call());
